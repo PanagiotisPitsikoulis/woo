@@ -6,7 +6,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.6.0
+ * @version 9.4.0
  */
 
 defined('ABSPATH') || exit;
@@ -17,9 +17,20 @@ global $product;
 if (empty($product) || !$product->is_visible()) {
 	return;
 }
+
+// Extra post classes
+$classes = array('card', 'bg-base-100', 'shadow-xl', 'overflow-hidden', 'h-full');
 ?>
-<li <?php wc_product_class('card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1', $product); ?>>
-	<figure class="relative px-4 pt-4">
+
+<li <?php wc_product_class($classes, $product); ?>>
+	<?php
+	/**
+	 * Hook: woocommerce_before_shop_loop_item.
+	 */
+	do_action('woocommerce_before_shop_loop_item');
+	?>
+
+	<figure class="px-4 pt-4">
 		<?php if ($product->is_on_sale()) : ?>
 			<div class="absolute top-6 right-6 z-10">
 				<span class="badge badge-secondary"><?php esc_html_e('Προσφορά!', 'tw'); ?></span>
@@ -37,7 +48,20 @@ if (empty($product) || !$product->is_visible()) {
 		?>
 	</figure>
 	
-	<div class="card-body p-4">
+	<div class="card-body">
+		<h2 class="card-title">
+			<a href="<?php echo esc_url($product->get_permalink()); ?>" class="hover:text-primary transition-colors">
+				<?php
+				/**
+				 * Hook: woocommerce_shop_loop_item_title.
+				 *
+				 * @hooked woocommerce_template_loop_product_title - 10
+				 */
+				do_action('woocommerce_shop_loop_item_title');
+				?>
+			</a>
+		</h2>
+		
 		<?php if ($product->get_average_rating()) : ?>
 			<div class="rating rating-sm mb-2">
 				<?php
@@ -58,12 +82,6 @@ if (empty($product) || !$product->is_visible()) {
 			</div>
 		<?php endif; ?>
 		
-		<a href="<?php echo esc_url(get_permalink($product->get_id())); ?>" class="no-underline">
-			<h2 class="card-title text-lg hover:text-primary transition-colors duration-200">
-				<?php echo esc_html($product->get_name()); ?>
-			</h2>
-		</a>
-		
 		<div class="mt-2 mb-4">
 			<?php
 			/**
@@ -76,8 +94,18 @@ if (empty($product) || !$product->is_visible()) {
 			?>
 		</div>
 		
-		<div class="card-actions justify-end mt-auto">
-			<a href="<?php echo esc_url($product->add_to_cart_url()); ?>" class="btn btn-primary btn-sm">
+		<div class="card-actions justify-end mt-4">
+			<?php
+			/**
+			 * Hook: woocommerce_after_shop_loop_item.
+			 *
+			 * @hooked woocommerce_template_loop_product_link_close - 5
+			 * @hooked woocommerce_template_loop_add_to_cart - 10
+			 */
+			remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
+			do_action('woocommerce_after_shop_loop_item');
+			?>
+			<a href="<?php echo esc_url($product->add_to_cart_url()); ?>" data-quantity="1" class="btn btn-primary btn-sm <?php echo $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button ajax_add_to_cart' : ''; ?>" <?php echo $product->is_purchasable() && $product->is_in_stock() ? 'data-product_id="' . esc_attr($product->get_id()) . '"' : ''; ?>>
 				<?php 
 				if ($product->is_type('variable')) {
 					esc_html_e('Επιλογή Παραλλαγών', 'tw');
