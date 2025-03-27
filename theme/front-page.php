@@ -47,7 +47,7 @@ get_header();
 		<div class="container mx-auto">
 			<h2 class="text-4xl font-bold text-center mb-12 relative">
 				<span class="inline-block relative">
-					<?php echo esc_html(get_theme_mod('tw_featured_categories_title', __('Featured Categories', 'tw'))); ?>
+					<?php echo esc_html(get_theme_mod('tw_featured_categories_title', __('Δημοφιλείς Κατηγορίες', 'tw'))); ?>
 					<span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary rounded-full"></span>
 				</span>
 			</h2>
@@ -95,7 +95,7 @@ get_header();
 								<?php endif; ?>
 								<div class="card-actions justify-end mt-auto">
 									<a href="<?php echo esc_url(get_term_link($category)); ?>" class="btn btn-sm btn-outline">
-										<?php esc_html_e('Browse', 'tw'); ?>
+										<?php esc_html_e('Περιήγηση', 'tw'); ?>
 										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
 											<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
 										</svg>
@@ -119,12 +119,12 @@ get_header();
 		<div class="container mx-auto">
 			<h2 class="text-4xl font-bold text-center mb-12 relative">
 				<span class="inline-block relative">
-					<?php echo esc_html(get_theme_mod('tw_featured_products_title', __('Featured Products', 'tw'))); ?>
+					<?php echo esc_html(get_theme_mod('tw_featured_products_title', __('Προτεινόμενα Προϊόντα', 'tw'))); ?>
 					<span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary rounded-full"></span>
 				</span>
 			</h2>
 			
-			<div class="woocommerce products-grid">
+			<div class="woocommerce">
 				<?php
 				if (class_exists('WooCommerce')) {
 					// Get featured products shortcode settings from theme mods
@@ -132,7 +132,7 @@ get_header();
 					$products_columns = get_theme_mod('tw_featured_products_columns', 4);
 					$products_orderby = get_theme_mod('tw_featured_products_orderby', 'popularity');
 					
-					echo do_shortcode('[products limit="' . esc_attr($products_per_page) . '" columns="' . esc_attr($products_columns) . '" orderby="' . esc_attr($products_orderby) . '" class="products-grid"]');
+					echo do_shortcode('[products limit="' . esc_attr($products_per_page) . '" columns="' . esc_attr($products_columns) . '" orderby="' . esc_attr($products_orderby) . '"]');
 				} else {
 					echo '<div class="text-center alert alert-warning p-6">' . esc_html__('WooCommerce is not active. Please install and activate WooCommerce to display products.', 'tw') . '</div>';
 				}
@@ -142,7 +142,7 @@ get_header();
 			<div class="text-center mt-12">
 				<?php if (class_exists('WooCommerce')) : ?>
 					<a href="<?php echo esc_url(get_permalink(wc_get_page_id('shop'))); ?>" class="btn btn-lg">
-						<?php echo esc_html(get_theme_mod('tw_view_all_products_text', __('View All Products', 'tw'))); ?>
+						<?php echo esc_html(get_theme_mod('tw_view_all_products_text', __('Προβολή Όλων των Προϊόντων', 'tw'))); ?>
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 ml-1">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
 						</svg>
