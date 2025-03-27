@@ -1,0 +1,96 @@
+# Copyright (C) 2024 Your Theme Name
+msgid ""
+msgstr ""
+"Project-Id-Version: TW Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tw\n"
+"POT-Creation-Date: 2024-03-27 12:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: woocommerce/content-product.php:31
+msgid "Sale!"
+msgstr ""
+
+#: woocommerce/content-product.php:89
+msgid "Select Options"
+msgstr ""
+
+#: woocommerce/content-product.php:91
+msgid "View Products"
+msgstr ""
+
+#: woocommerce/content-product.php:93
+msgid "Add to Cart"
+msgstr ""
+
+#: front-page.php:17
+msgid "Shop Now"
+msgstr ""
+
+#: search.php:42
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:89
+msgid "Results Found"
+msgstr ""
+
+#: search.php:103
+msgid "Nothing Found"
+msgstr ""
+
+#: search.php:106
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: search.php:156
+msgid "Suggestions"
+msgstr ""
+
+#: search.php:158
+msgid "Check your spelling"
+msgstr ""
+
+#: search.php:159
+msgid "Try more general keywords"
+msgstr ""
+
+#: search.php:160
+msgid "Try different keywords"
+msgstr ""
+
+#: search.php:165
+msgid "Back to Homepage"
+msgstr ""
+
+#: archive.php:25
+msgid "Archive for %s"
+msgstr ""
+
+#: archive.php:34
+msgid "Posts by %s"
+msgstr ""
+
+#: archive.php:37
+msgid "Category Archive"
+msgstr ""
+
+#: archive.php:39
+msgid "Tag: %s"
+msgstr ""
+
+#: archive.php:82
+msgid "Total Posts"
+msgstr ""
+
+#: archive.php:112
+msgid "Featured"
+msgstr ""
+
+#: archive.php:156
+msgid "Read More"
+msgstr "" 

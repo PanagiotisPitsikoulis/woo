@@ -1,0 +1,98 @@
+# Copyright (C) 2024 Your Theme Name
+msgid ""
+msgstr ""
+"Project-Id-Version: TW Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tw\n"
+"POT-Creation-Date: 2024-03-27 12:00+0000\n"
+"PO-Revision-Date: 2024-03-27 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Greek\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: woocommerce/content-product.php:31
+msgid "Sale!"
+msgstr "Προσφορά!"
+
+#: woocommerce/content-product.php:89
+msgid "Select Options"
+msgstr "Επιλογή Επιλογών"
+
+#: woocommerce/content-product.php:91
+msgid "View Products"
+msgstr "Προβολή Προϊόντων"
+
+#: woocommerce/content-product.php:93
+msgid "Add to Cart"
+msgstr "Προσθήκη στο Καλάθι"
+
+#: front-page.php:17
+msgid "Shop Now"
+msgstr "Αγορά Τώρα"
+
+#: search.php:42
+msgid "Search Results for: %s"
+msgstr "Αποτελέσματα Αναζήτησης για: %s"
+
+#: search.php:89
+msgid "Results Found"
+msgstr "Βρέθηκαν Αποτελέσματα"
+
+#: search.php:103
+msgid "Nothing Found"
+msgstr "Δεν Βρέθηκε Τίποτα"
+
+#: search.php:106
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Συγγνώμη, αλλά δεν βρέθηκε κάτι που να ταιριάζει με τους όρους αναζήτησης. Παρακαλώ δοκιμάστε ξανά με διαφορετικές λέξεις-κλειδιά."
+
+#: search.php:156
+msgid "Suggestions"
+msgstr "Προτάσεις"
+
+#: search.php:158
+msgid "Check your spelling"
+msgstr "Ελέγξτε την ορθογραφία σας"
+
+#: search.php:159
+msgid "Try more general keywords"
+msgstr "Δοκιμάστε πιο γενικές λέξεις-κλειδιά"
+
+#: search.php:160
+msgid "Try different keywords"
+msgstr "Δοκιμάστε διαφορετικές λέξεις-κλειδιά"
+
+#: search.php:165
+msgid "Back to Homepage"
+msgstr "Επιστροφή στην Αρχική"
+
+#: archive.php:25
+msgid "Archive for %s"
+msgstr "Αρχείο για %s"
+
+#: archive.php:34
+msgid "Posts by %s"
+msgstr "Άρθρα από %s"
+
+#: archive.php:37
+msgid "Category Archive"
+msgstr "Αρχείο Κατηγορίας"
+
+#: archive.php:39
+msgid "Tag: %s"
+msgstr "Ετικέτα: %s"
+
+#: archive.php:82
+msgid "Total Posts"
+msgstr "Σύνολο Άρθρων"
+
+#: archive.php:112
+msgid "Featured"
+msgstr "Προτεινόμενο"
+
+#: archive.php:156
+msgid "Read More"
+msgstr "Διαβάστε Περισσότερα" 
