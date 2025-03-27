@@ -24,3 +24,7 @@
  */
 @import "./tailwind/partials/footer.css";
 @plugin "daisyui";
+
+.woocommerce-breadcrumb {
+    @apply hidden !important;
+}
