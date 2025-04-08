@@ -54,10 +54,11 @@ get_header();
 			
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 				<?php
-				// Get all product categories
+				// Get only parent product categories
 				$args = array(
 					'taxonomy'   => 'product_cat',
 					'hide_empty' => false,
+					'parent'     => 0, // Only get parent categories
 					'orderby'    => 'count',
 					'order'      => 'DESC',
 				);

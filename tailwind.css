@@ -26,5 +26,5 @@
 @plugin "daisyui";
 
 .woocommerce-breadcrumb {
-    @apply hidden !important;
+    @apply hidden;
 }
